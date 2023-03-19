@@ -33,12 +33,12 @@ header {
   background-color: var(--color04);
   min-height: 120px;
   font-family: "cyberpunk font", Arial, Helvetica, sans-serif;
-transition: all .5s;
+  transition: all 0.5s;
 }
 
 nav {
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
 #menubar {
@@ -54,6 +54,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 nav a {
@@ -154,7 +155,7 @@ nav a:hover {
 #container-news {
   min-height: 1100px;
   height: 100vh;
-  background-image: url(images/background-2-gif.gif);
+  background-image: url(images/background-2.jpg);
   background-size: cover;
 }
 

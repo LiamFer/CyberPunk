@@ -5,9 +5,9 @@ menu.addEventListener("click", shownav);
 function shownav() {
   var navOptions = document.getElementById("nav-options");
 
-  if (navOptions.style.display == "block") {
+  if (navOptions.style.display == "flex") {
     navOptions.style.display = "none";
   } else {
-    navOptions.style.display = "block";
+    navOptions.style.display = "flex";
   }
 }
