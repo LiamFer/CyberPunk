@@ -1,9 +1,13 @@
 var menu = document.getElementById("menubar");
-menu.addEventListener("mouseover", shownav);
-menu.addEventListener("mouseout", hidenav)
+menu.addEventListener("click", shownav);
 
 
 function shownav() {
   var navOptions = document.getElementById("nav-options");
-  navOptions.style.display = "block";
+
+  if (navOptions.style.display == "block") {
+    navOptions.style.display = "none";
+  } else {
+    navOptions.style.display = "block";
+  }
 }
