@@ -155,7 +155,7 @@ nav a:hover {
 #container-news {
   min-height: 1100px;
   height: 100vh;
-  background-image: url(images/background-2.jpg);
+  background-image: url(images/background-3.jpg);
   background-size: cover;
 }
 
@@ -205,4 +205,8 @@ nav a:hover {
 .input-field input:focus,
 .input-field input:valid {
   border: 1px solid var(--color01);
+}
+
+hr {
+  justify-self: flex-start;
 }
