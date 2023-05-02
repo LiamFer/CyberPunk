@@ -1,13 +1,10 @@
-var menu = document.getElementById("menubar");
-menu.addEventListener("click", shownav);
+let burguer = document.getElementById("menu-burguer");
 
+burguer.addEventListener("click", menuOpen);
 
-function shownav() {
-  var navOptions = document.getElementById("nav-options");
-
-  if (navOptions.style.display == "flex") {
-    navOptions.style.display = "none";
-  } else {
-    navOptions.style.display = "flex";
-  }
+function menuOpen() {
+  let menuMobile = document.getElementsByTagName("nav")[0];
+  menuMobile.classList.toggle("menu-mobile");
+  burguer.classList.toggle("animation-rotator");
+  burguer.classList.toggle("animation-rotatereverse");
 }
