@@ -1,4 +1,4 @@
-/* Desktop Version */
+/* Mobile First Version */
 
 @font-face {
   font-family: "Cyberpunk Font";
@@ -201,6 +201,8 @@ nav > span {
   background-position: center;
 }
 
+/* Animações */
+
 .animation-rotate {
   animation-name: rotating;
   animation-duration: 0.5s;
@@ -221,8 +223,6 @@ nav > span {
   animation-timing-function: ease;
   animation-fill-mode: forwards;
 }
-
-/* Animações */
 
 @keyframes rotating-rev {
   0% {
