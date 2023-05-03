@@ -30,6 +30,10 @@ img {
   -webkit-user-drag: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background-color: #ffffff;
 }
@@ -53,7 +57,7 @@ nav {
   position: absolute;
   visibility: hidden;
   top: 60px;
-  
+
   height: 100%;
   width: 0;
 }
@@ -104,7 +108,12 @@ nav > span {
   width: 100%;
 }
 
+.typed1 {
+  animation: slideLeft 1s ease forwards;
+}
+
 #menu-burguer {
+  animation: slideRight 1s ease forwards;
   cursor: pointer;
   height: 45px;
   width: 45px;
@@ -121,18 +130,76 @@ nav > span {
 }
 
 .animation-rotator {
-  animation-name: rotating;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease;
+  animation: rotating 0.5s ease forwards;
 }
 
 .animation-rotatereverse {
-  animation-name: rotating-rev;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease;
+  animation: rotating-rev 0.5s ease forwards;
 }
+
+#container-1 {
+  height: 95vh;
+  min-height: 400px;
+  background-image: url(images/background-2.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 2;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 20px;
+  backdrop-filter: blur(2px);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  animation: slideUp 2.5s ease forwards;
+  position: relative;
+}
+
+.textbox {
+  font-size: 20px;
+  font-family: "cyberpunk font", monospace;
+  color: white;
+  text-shadow: 1px 2px 3px black;
+  padding: 10px;
+  width: 220px;
+  animation: floating 4s linear 2.5s infinite;
+}
+
+#triangle {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-size: cover;
+  height: 190px;
+  rotate: 180deg;
+  z-index: 0;
+}
+
+.textbox span {
+  color: var(--color01);
+}
+
+#woman-gun {
+  width: 100%;
+  max-width: 90vh;
+  z-index: 1;
+}
+
+#container-2 {
+  height: 100vh;
+  background-image: linear-gradient(55deg, var(--color02), var(--color05));
+  background-size: cover;
+  background-position: center;
+}
+
+/* Animações */
 
 @keyframes rotating-rev {
   0% {
@@ -166,64 +233,52 @@ nav > span {
   }
 }
 
-#container-1 {
-  height: 100vh;
-  background-image: url(images/background-2.jpeg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  z-index: 2;
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
-.welcome-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 20px;
-  backdrop-filter: blur(2px);
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  animation-name: slideUp;
-  animation-duration: 2.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease;
-  position: relative;
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
-.textbox {
-  font-size: 20px;
-  font-family: "cyberpunk font", monospace;
-  color: white;
-  text-shadow: 1px 2px 3px black;
-  padding: 10px;
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
-#triangle {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  background-size: cover;
-  height: 190px;
-  rotate: 180deg;
-  z-index: 0;
-}
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
 
-.textbox span {
-  color: var(--color01);
-}
+  50% {
+    transform: translateY(10px);
+  }
 
-#woman-gun {
-  width: 100%;
-  max-width: 90vh;
-  z-index: 1;
-}
-
-#container-2 {
-  height: 100vh;
-  background-image: linear-gradient(55deg, var(--color02), var(--color05));
-  background-size: cover;
-  background-position: center;
+  100% {
+    transform: translateY(0px);
+  }
 }
