@@ -30,13 +30,8 @@ img {
   -webkit-user-drag: none;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 body {
-  background-color: #080705;
-  position: relative;
+  background-color: #ffffff;
 }
 
 header {
@@ -58,7 +53,7 @@ nav {
   position: absolute;
   visibility: hidden;
   top: 60px;
-  right: 0px;
+  
   height: 100%;
   width: 0;
 }
@@ -210,6 +205,7 @@ nav > span {
   position: absolute;
   bottom: 0px;
   width: 100%;
+  background-size: cover;
   height: 190px;
   rotate: 180deg;
   z-index: 0;
