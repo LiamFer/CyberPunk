@@ -65,7 +65,6 @@ nav {
   position: absolute;
   visibility: hidden;
   top: 60px;
-
   height: 100%;
   width: 0;
 }
@@ -94,7 +93,7 @@ nav > span {
   font-size: 25px;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   transition: 0.5s;
 }
 
@@ -121,7 +120,7 @@ nav > span {
 }
 
 #menu-burguer {
-  animation: slideRight 1s ease forwards;
+  
   cursor: pointer;
   height: 45px;
   width: 45px;
@@ -135,14 +134,6 @@ nav > span {
   width: 35px;
   height: 100%;
   fill: var(--color05);
-}
-
-.animation-rotator {
-  animation: rotating 0.5s ease forwards;
-}
-
-.animation-rotatereverse {
-  animation: rotating-rev 0.5s ease forwards;
 }
 
 #container-1 {
@@ -177,7 +168,7 @@ nav > span {
   text-shadow: 1px 2px 3px black;
   padding: 10px;
   width: 220px;
-  animation: floating 4s linear 2.5s infinite;
+  animation: floating 10s linear 2.5s infinite;
 }
 
 #triangle {
@@ -210,6 +201,27 @@ nav > span {
   background-position: center;
 }
 
+.animation-rotate {
+  animation-name: rotating;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.animation-rotaterev {
+  animation-name: rotating-rev;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.animation-join {
+  animation-name: slideRight;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
 /* Animações */
 
 @keyframes rotating-rev {
@@ -224,7 +236,7 @@ nav > span {
 
 @keyframes rotating {
   0% {
-    rotate: 0;
+    rotate: 0deg;
   }
 
   100% {
