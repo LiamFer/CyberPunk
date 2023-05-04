@@ -138,7 +138,7 @@ nav > span {
 }
 
 #container-1 {
-  height: 95vh;
+  height: 90vh;
   min-height: 400px;
   background-image: url(images/background-2.jpeg);
   background-size: cover;
@@ -152,7 +152,9 @@ nav > span {
 .welcome-text {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: flex-end;
+  text-align: center;
   gap: 20px;
   backdrop-filter: blur(2px);
   height: 100%;
@@ -163,12 +165,12 @@ nav > span {
 }
 
 .textbox {
-  font-size: 20px;
+  font-size: 1.4em;
   font-family: "cyberpunk font", monospace;
   color: white;
   text-shadow: 1px 2px 3px black;
   padding: 10px;
-  width: 220px;
+  width: 235px;
   animation: floating 10s linear 2.5s infinite;
 }
 
@@ -197,9 +199,33 @@ nav > span {
 
 #container-2 {
   height: 100vh;
-  background-image: linear-gradient(55deg, var(--color02), var(--color05));
+  background-image: linear-gradient(55deg, #080705, #202020);
   background-size: cover;
   background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#kanjis {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: white;
+  font-size: 1.3em;
+  background-color: var(--color02);
+  padding: 5px;
+}
+
+#container-2::before {
+  border-top: 2px solid rgba(39, 39, 39, 0.973);
+  content: "";
+  background-image: url(images/triangle.svg);
+  position: absolute;
+  width: 100%;
+  height: 130px;
+  top: 0px;
+  left: 0px;
 }
 
 /* Animações */
