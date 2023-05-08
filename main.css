@@ -168,26 +168,19 @@ nav > span {
   width: 100%;
   z-index: 1;
   animation: slideUp 2.5s ease forwards;
-  position: relative;
-}
-
-#floating-effect {
-  animation: floating 6s linear 2.5s infinite alternate;
-  align-self: center;
 }
 
 .textbox {
   font-size: 1.4em;
   font-family: "cyberpunk font", monospace;
-  background-color: #01fcf4e0;
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.377);
   padding: 15px;
   border: 2px solid black;
   border-width: 2px 2px 5px 2px;
   width: 265px;
+  align-self: center;
   box-shadow: 5px 5px 10px #a79d07;
-  transform: skewY(-10deg);
-  position: relative;
+  animation: floating 6s linear 2.5s infinite alternate;
 }
 
 .textbox,
