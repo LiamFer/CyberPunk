@@ -7,6 +7,12 @@
 }
 
 @font-face {
+  font-family: "Cyberpunk";
+  src: url(fonts/Cyberpunk.otf) format("opentype"),
+    url(fonts/Cyberpunk.ttf) format("truetype");
+}
+
+@font-face {
   font-family: "Pixel Art";
   src: url(fonts/Minecraft.ttf) format("truetype");
 }
@@ -57,7 +63,7 @@ header::after {
   background-image: url(images/triangle-header.svg);
   position: absolute;
   width: 100%;
-  height: 30px;
+  height: 10px;
   top: 65px;
   left: 0px;
 }
@@ -151,9 +157,10 @@ nav > span {
 
 .welcome-text {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
   text-align: center;
   gap: 20px;
   backdrop-filter: blur(2px);
@@ -166,6 +173,7 @@ nav > span {
 
 .textbox {
   font-size: 1.4em;
+  align-self: center;
   font-family: "cyberpunk font", monospace;
   color: white;
   text-shadow: 1px 2px 3px black;
