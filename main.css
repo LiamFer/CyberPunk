@@ -38,6 +38,7 @@ img {
 
 ::-webkit-scrollbar {
   display: none;
+  animation-delay: 1s;
 }
 
 body {
@@ -51,7 +52,7 @@ header {
   font-family: "cyberpunk font", monospace;
   min-height: 60px;
   padding: 10px;
-  color: rgb(255, 255, 255);
+  color: var(--color04);
   position: sticky;
   top: 0px;
   background-color: var(--color02);
@@ -140,13 +141,13 @@ nav > span {
 #menu-burguer svg {
   width: 35px;
   height: 100%;
-  fill: var(--color05);
+  fill: var(--color04);
 }
 
 #container-1 {
   height: 100vh;
   min-height: 400px;
-  background-image: url(images/background-2.jpeg);
+  background-image: url(images/background-5.png);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -163,7 +164,6 @@ nav > span {
   align-items: flex-end;
   justify-content: center;
   text-align: center;
-  backdrop-filter: blur(2px);
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -171,15 +171,28 @@ nav > span {
   position: relative;
 }
 
+#floating-effect {
+  animation: floating 6s linear 2.5s infinite alternate;
+  align-self: center;
+}
+
 .textbox {
   font-size: 1.4em;
-  align-self: center;
   font-family: "cyberpunk font", monospace;
-  color: white;
-  text-shadow: 1px 2px 3px black;
-  padding: 10px;
-  width: 235px;
-  animation: floating 10s linear 2.5s infinite;
+  background-color: #01fcf4e0;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.377);
+  padding: 15px;
+  border: 2px solid black;
+  border-width: 2px 2px 5px 2px;
+  width: 265px;
+  box-shadow: 5px 5px 10px #a79d07;
+  transform: skewY(-10deg);
+  position: relative;
+}
+
+.textbox,
+.typed2 {
+  color: var(--color02);
 }
 
 #triangle {
@@ -192,18 +205,11 @@ nav > span {
   z-index: 0;
 }
 
-.typed2 {
-  color: var(--color01);
-  color: #fff9f9;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #a83c3c, 0 0 42px #fc4646,
-    0 0 82px #fc4646, 0 0 92px #fc4646, 0 0 102px #fc4646, 0 0 151px #fc4646;
-}
-
-#woman-gun {
+#man-gun {
   width: 100%;
-  max-width: 90vh;
+  max-width: 80vh;
   z-index: 1;
-  filter: drop-shadow(0 0 92px #000000);
+  filter: drop-shadow(0 0 92px #000000a1);
 }
 
 .scroll-line {
@@ -213,7 +219,7 @@ nav > span {
   font-family: "cyberpunk font";
   text-transform: uppercase;
   letter-spacing: 5px;
-  font-size: .9em;
+  font-size: 0.9em;
   writing-mode: vertical-rl;
   text-orientation: upright;
   height: 200px;
@@ -221,7 +227,7 @@ nav > span {
   align-items: center;
   overflow: hidden;
   right: 10px;
-  bottom: -150px;
+  bottom: 10px;
 }
 
 .scroll-line > div {
@@ -532,11 +538,7 @@ nav > span {
     transform: translateY(0px);
   }
 
-  50% {
-    transform: translateY(10px);
-  }
-
   100% {
-    transform: translateY(0px);
+    transform: translateY(10px);
   }
 }

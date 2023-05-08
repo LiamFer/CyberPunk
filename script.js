@@ -28,8 +28,6 @@ function menuOpen() {
   }
 }
 
-
-
 // Efeitos com Typed.js
 
 var typed1 = new Typed(".typed1", {
@@ -45,3 +43,4 @@ var typed2 = new Typed(".typed2", {
   typeSpeed: 140,
   backSpeed: 80,
 });
+
