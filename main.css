@@ -20,7 +20,7 @@
 :root {
   --color01: #fc4646;
   --color02: #080705;
-  --color03: #77eb9c;
+  --color03: #07f9fa;
   --color04: #fdf608;
   --color05: #fbfff1;
 }
@@ -42,7 +42,7 @@ img {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 header {
@@ -70,17 +70,12 @@ header::after {
 }
 
 nav {
-  border-top: #ffffff 2px solid;
+  border-top: var(--color03) 2px solid;
   position: absolute;
   visibility: hidden;
   top: 60px;
   height: 100%;
   width: 0;
-}
-
-nav > a {
-  text-decoration: none;
-  color: white;
 }
 
 nav > span {
@@ -107,7 +102,7 @@ nav > span {
 }
 
 .menu-mobile > a {
-  color: var(--color05);
+  color: var(--color04);
   text-decoration: none;
 }
 
@@ -116,7 +111,7 @@ nav > span {
   width: 0%;
   height: 2px;
   display: block;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color03);
   transition: 0.5s;
 }
 
@@ -185,6 +180,7 @@ nav > span {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  animation: floating 6s linear infinite alternate;
 }
 
 #typed-text {
@@ -203,11 +199,14 @@ nav > span {
   font-family: "pixel art";
   font-size: 0.7em;
   width: 300px;
+  height: 80px;
 }
 
 #main-character {
   width: 100%;
   max-width: 80vh;
+  animation: slideUp 2.5s ease forwards;
+  filter: drop-shadow(2px 2px 15px rgba(0, 0, 0, 0.514));
 }
 
 .scroll-line {
@@ -256,7 +255,6 @@ nav > span {
   height: 130px;
   top: 0px;
   left: 0px;
-  animation: slideUp 2.5s ease forwards;
 }
 
 #container-2::after {
@@ -538,5 +536,14 @@ nav > span {
 
   100% {
     transform: translateY(10px);
+  }
+}
+
+@media screen and (min-width: 730px) {
+  #additional-content {
+    display: block;
+    font-family: "pixel art";
+    font-size: 0.7em;
+    width: 300px;
   }
 }
