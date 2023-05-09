@@ -31,8 +31,8 @@ function menuOpen() {
 var typed2 = new Typed(".typed2", {
   strings: ["City of Dreams", "NightCity"],
   loop: true,
-  typeSpeed: 140,
-  showCursor: false,
+  typeSpeed: 180,
+  fadeOut: true,
 });
 
 var typed3 = new Typed(".typed3", {
