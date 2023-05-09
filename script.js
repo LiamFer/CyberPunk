@@ -29,16 +29,16 @@ function menuOpen() {
 // Efeitos com Typed.js
 
 var typed2 = new Typed(".typed2", {
-  strings: ["City of Dreams"],
-  loop: false,
+  strings: ["City of Dreams", "NightCity"],
+  loop: true,
   typeSpeed: 140,
   showCursor: false,
 });
 
 var typed3 = new Typed(".typed3", {
   strings: ["あきらめてはいけない"],
-  loop: false,
-  typeSpeed: 140,
+  loop: true,
+  typeSpeed: 10,
   showCursor: false,
 });
 
