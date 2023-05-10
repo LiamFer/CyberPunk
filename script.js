@@ -35,18 +35,3 @@ var typed2 = new Typed(".typed2", {
   fadeOut: true,
 });
 
-var typed3 = new Typed(".typed3", {
-  strings: ["あきらめてはいけない"],
-  loop: true,
-  typeSpeed: 10,
-  showCursor: false,
-});
-
-var typed4 = new Typed(".typed4", {
-  strings: [
-    "In the dystopian world of Cyberpunk 2077, where corporations hold ultimate power and the line between human and machine is blurred, the words giving up hold a different weight. Our greatest weakness as individuals, as a society, and as a species, lies in surrendering to the oppression of those in control.",
-  ],
-  loop: false,
-  typeSpeed: 10,
-  showCursor: false,
-});

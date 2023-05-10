@@ -280,7 +280,7 @@ nav > span {
 }
 
 #judy-textbox::-webkit-scrollbar-thumb {
-  background-color:var(--color02) ;
+  background-color: var(--color02);
   border-radius: 10px;
 }
 
@@ -388,6 +388,7 @@ nav > span {
   align-items: center;
 }
 
+
 #container-3::before {
   content: "";
   background-image: url(images/triangleAsymmetrical2.svg);
@@ -396,6 +397,7 @@ nav > span {
   height: 50px;
   top: 0px;
   left: 0px;
+  z-index: 1;
 }
 
 #container-3::after {
