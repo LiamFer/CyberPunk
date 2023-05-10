@@ -237,74 +237,150 @@ nav > span {
 
 #container-2 {
   height: 100vh;
-  min-height: 580px;
-  background-image: url(images/background-4.jpg);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 2em;
-}
-
-#container-2::before {
+  min-height: 450px;
   border-top: 2px solid rgba(39, 39, 39, 0.973);
-  content: "";
-  background-image: url(images/triangle.svg);
-  position: absolute;
-  width: 100%;
-  height: 130px;
-  top: 0px;
-  left: 0px;
+  border-bottom: 2px solid rgba(39, 39, 39, 0.973);
+  overflow: hidden;
 }
 
-#container-2::after {
-  border-top: 2px solid rgba(39, 39, 39, 0.973);
-  content: "";
-  background-image: url(images/triangleAsymmetrical.svg);
-  position: absolute;
+#content-judy {
   width: 100%;
-  height: 100px;
-  bottom: 0px;
-  rotate: 180deg;
-  left: 0px;
-}
-
-#kanjis-textbox {
-  color: white;
-  display: flex;
-  gap: 5px;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
   height: 100%;
-  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(450px, 100vh);
+  background-color: var(--color02);
+  grid-template-areas: "judyText Judy";
+  align-items: center;
+  background-image: url(images/background-5.png);
+  background-size: cover;
+  position: relative;
 }
 
-#kanjis1 {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  color: white;
-  font-size: 1.5em;
+#judy-textbox {
+  grid-area: "judyText";
   background-color: var(--color02);
-  padding: 5px;
+  color: white;
+  padding: 20px;
+  position: relative;
+  align-self: flex-start;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
 }
 
-#kanjis2 {
+#judy-title {
+  padding-right: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  gap: 5px;
   writing-mode: vertical-rl;
+  text-align: center;
   text-orientation: upright;
-  color: white;
-  font-size: 1.1em;
-  background-color: var(--color02);
-  padding: 5px;
+  z-index: 1;
+}
+
+#judy-title h1 {
+  font-size: 28px;
+  background-color: white;
+  color: var(--color02);
+  font-family: "cyberpunk font";
+  padding: 2px;
+  width: fit-content;
+}
+
+#kanjis {
+  font-size: 17px;
+  background-color: white;
+  color: var(--color02);
+  height: fit-content;
+  padding: 2px;
+}
+
+@media screen and (min-width: 560px) {
+  #judy-textbox {
+    justify-content: center;
+  }
+
+  #judy-title {
+    flex-direction: column;
+    writing-mode: horizontal-tb;
+  }
+
+  #judy-title h1 {
+    font-size: 18px;
+  }
+
+  #kanjis {
+    font-size: 15px;
+    width: fit-content;
+  }
+
+  #extra-content {
+    display: flex;
+  }
+}
+
+#extra-content {
+  display: none;
+  font-family: monospace;
+  font-size: 12px;
+  width: 100%;
+  padding: 10px;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  z-index: 1;
+}
+
+#extra-content iframe {
+  object-fit: cover;
+  width: 90%;
+  height: auto;
+}
+
+#judy-textbox::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-image: url(images/Cyberpunk_2077_razor_vertical_edge.svg);
+  background-position: center;
+  background-repeat: repeat-x;
+  height: 100vh;
+  width: 20px;
 }
 
 #judy-girl {
-  height: 90%;
-  width: auto;
+  margin: auto;
+  grid-area: "Judy";
+  height: 100%;
+  filter: drop-shadow(2px 2px 15px rgba(0, 0, 0, 0.514));
   z-index: 1;
-  filter: drop-shadow(0 0 92px #00000048);
+}
+
+#content-judy::before {
+  content: "";
+  position: absolute;
+  background-image: url(images/triangleAsymmetrical2.svg);
+  width: 100%;
+  height: 10%;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+#content-judy::after {
+  content: "";
+  position: absolute;
+  background-image: url(images/triangle.svg);
+  width: 100%;
+  height: 20%;
+  bottom: -1px;
+  right: 0px;
+  rotate: 180deg;
 }
 
 #container-3 {
