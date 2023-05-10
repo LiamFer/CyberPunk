@@ -270,6 +270,20 @@ nav > span {
   overflow: scroll;
 }
 
+#judy-textbox::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+}
+
+#judy-textbox::-webkit-scrollbar-track {
+  background-color: #fdf608;
+}
+
+#judy-textbox::-webkit-scrollbar-thumb {
+  background-color:var(--color02) ;
+  border-radius: 10px;
+}
+
 #judy-title {
   padding: 25px 25px 0px 0px;
   display: flex;
@@ -313,69 +327,12 @@ nav > span {
 
 #extra-content p {
   border-top: solid 2px var(--color04);
-padding-top: .5em;
+  padding-top: 0.5em;
 }
 
-@media screen and (min-width: 560px) {
-  #judy-title {
-    flex-direction: column;
-    writing-mode: horizontal-tb;
-  }
-
-  #judy-title h1 {
-    font-size: 18px;
-  }
-
-  #kanjis {
-    font-size: 15px;
-    width: fit-content;
-  }
-
-  #extra-content {
-    display: flex;
-  }
-}
-
-@media screen and (min-width: 760px) {
-  #judy-title h1 {
-    font-size: 22px;
-  }
-
-  #kanjis {
-    font-size: 19px;
-    width: fit-content;
-  }
-
-  #extra-content {
-    font-size: 14px;
-  }
-}
 #extra-content iframe {
   width: 100%;
   height: auto;
-}
-
-@media screen and (min-width: 1020px) {
-  #judy-title h1 {
-    font-size: 3.7em;
-  }
-
-  #kanjis {
-    font-size: 1.6em;
-    width: fit-content;
-  }
-
-  #extra-content {
-    font-size: 1.5em;
-    line-height: 2em;
-  }
-
-  #judy-textbox {
-    gap: 3em;
-  }
-  #extra-content iframe {
-    height: 300px;
-  }
 }
 
 #judy-textbox::after {
@@ -536,6 +493,64 @@ padding-top: .5em;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 560px) {
+  #judy-title {
+    flex-direction: column;
+    writing-mode: horizontal-tb;
+  }
+
+  #judy-title h1 {
+    font-size: 18px;
+  }
+
+  #kanjis {
+    font-size: 15px;
+    width: fit-content;
+  }
+
+  #extra-content {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  #judy-title h1 {
+    font-size: 22px;
+  }
+
+  #kanjis {
+    font-size: 19px;
+    width: fit-content;
+  }
+
+  #extra-content {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  #judy-title h1 {
+    font-size: 3.7em;
+  }
+
+  #kanjis {
+    font-size: 1.6em;
+    width: fit-content;
+  }
+
+  #extra-content {
+    font-size: 1.5em;
+    line-height: 2em;
+  }
+
+  #judy-textbox {
+    gap: 3em;
+  }
+  #extra-content iframe {
+    height: 15em;
+  }
 }
 
 /* Animações */
