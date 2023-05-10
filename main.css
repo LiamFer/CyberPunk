@@ -299,9 +299,21 @@ nav > span {
   padding: 2px;
 }
 
+#extra-content {
+  display: none;
+  font-family: monospace;
+  font-size: 12px;
+  width: 100%;
+  padding: 10px;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+}
+
 @media screen and (min-width: 560px) {
   #judy-textbox {
     justify-content: center;
+
   }
 
   #judy-title {
@@ -323,20 +335,9 @@ nav > span {
   }
 }
 
-#extra-content {
-  display: none;
-  font-family: monospace;
-  font-size: 12px;
-  width: 100%;
-  padding: 10px;
-  flex-direction: column;
-  text-align: center;
-  gap: 20px;
-  z-index: 1;
-}
+
 
 #extra-content iframe {
-  object-fit: cover;
   width: 90%;
   height: auto;
 }
