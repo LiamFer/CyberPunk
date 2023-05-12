@@ -437,8 +437,14 @@ nav > span {
   padding: 20px;
   backdrop-filter: blur(2px);
   transition: 0.5s all ease;
-  position: relative;
+  position: absolute;
   border: 1px solid rgb(194, 194, 194);
+  width: 180px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 #join-us-button.red-button {

@@ -51,5 +51,5 @@ function formOpen() {
   function hide() {
     joinButton.style.display = "none";
   }
-  setTimeout(hide, 1000);
+  setTimeout(hide, 3000);
 }
