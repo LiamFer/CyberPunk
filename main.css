@@ -737,6 +737,74 @@ input[type="radio"] {
 }
 
 @media screen and (min-width: 760px) {
+  header::after {
+    top: 60px;
+  }
+
+  header {
+    justify-content: space-around;
+  }
+
+  nav {
+    border-top: transparent 0px solid;
+    position: static;
+    visibility: visible;
+    top: auto;
+    height: 100%;
+    width: fit-content;
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
+    font-size: 1.3em;
+    padding: 10px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--color04);
+  }
+
+  nav a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color03);
+    transition: 0.3s all ease-in-out;
+  }
+
+  nav a:hover::after {
+    width: 100%;
+  }
+
+  .menu-mobile > a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    display: block;
+    background-color: var(--color03);
+    transition: 0.5s;
+  }
+
+  .menu-mobile > a:hover::after {
+    width: 100%;
+  }
+
+  #logo {
+    animation: slideLeft 1s ease forwards;
+    width: 150px;
+  }
+
+  #menu-burguer {
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+  }
+
   #judy-title h1 {
     font-size: 22px;
   }
