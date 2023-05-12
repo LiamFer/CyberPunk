@@ -750,6 +750,18 @@ input[type="radio"] {
     font-size: 14px;
   }
 
+  .square-infos {
+    font-size: 1.5em;
+  }
+
+  input,
+  select,
+  label {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1020px) {
   #formulario {
     display: none;
     grid-template-columns: 1fr 2fr;
@@ -795,9 +807,7 @@ input[type="radio"] {
   label {
     font-size: 1em;
   }
-}
 
-@media screen and (min-width: 1020px) {
   #judy-title h1 {
     font-size: 3.7em;
   }
