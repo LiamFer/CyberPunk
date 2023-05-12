@@ -35,3 +35,21 @@ var typed2 = new Typed(".typed2", {
   fadeOut: true,
 });
 
+// Interatividade com o Formulário
+
+const joinButton = document.getElementById("join-us-button");
+const demonBackground = document.getElementById("demon-background");
+const formulario = document.getElementById("formulario");
+
+joinButton.addEventListener("click", formOpen);
+
+function formOpen() {
+  joinButton.classList.toggle("red-button");
+  demonBackground.classList.toggle("showdemon");
+  formulario.classList.toggle("showform");
+
+  function hide() {
+    joinButton.style.display = "none";
+  }
+  setTimeout(hide, 1000);
+}
