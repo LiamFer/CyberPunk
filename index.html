@@ -76,6 +76,51 @@
 
         <section id="container-4">
 
+
+            <div id="formulario">
+
+                <div id="form-text">
+                    <h1>Become one of Us</h1>
+                    <p>Welcome to the Cyberpunk 2077 Universe!
+
+                        We're thrilled to have you join us in the dystopian metropolis of Night City. To ensure you have
+                        an immersive and unforgettable experience, please provide us with some details about your
+                        character. Once we have your information, we'll generate a unique backstory tailored to your
+                        preferences.</p>
+                </div>
+
+                <form id="join-form" action="POST" autocomplete="off">
+                    <input type="text" name="nome" id="iname" placeholder="your id" required maxlength="10">
+
+                    <input type="date" name="age" id="iage" required>
+                    <div id="genders">
+                        <input type="radio" name="radio" id="imale">
+                        <input type="radio" name="radio" id="ifemale">
+                        <input type="radio" name="radio" id="inonbinary">
+                        <label for="imale" id="male">Male</label>
+                        <label for="ifemale" id="female">Female</label>
+                        <label for="inonbinary" id="nonbinary">Non-Binary</label>
+                    </div>
+                    <select name="select" id="ipath">
+                        <option value="" disabled selected>Chose your way</option>
+                        <option value="nomad">Nomad</option>
+                        <option value="street-kid">Street Kid</option>
+                        <option value="corpo">Corpo</option>
+                    </select>
+
+
+                    <input type="submit" value="Submit">
+                </form>
+
+
+                <div id="form-design">
+                    <div class="square-infos">Gender</div>
+                    <div class="square-infos">Path</div>
+                    <div class="square-infos">Age</div>
+                </div>
+            </div>
+
+
         </section>
 
 

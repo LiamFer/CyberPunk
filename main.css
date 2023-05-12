@@ -23,6 +23,8 @@
   --color03: #07f9fa;
   --color04: #fdf608;
   --color05: #fbfff1;
+  --color06: #be504d;
+  --color07: #0e0c17;
 }
 
 * {
@@ -388,7 +390,6 @@ nav > span {
   align-items: center;
 }
 
-
 #container-3::before {
   content: "";
   background-image: url(images/triangleAsymmetrical2.svg);
@@ -488,13 +489,163 @@ nav > span {
 
 #container-4 {
   height: 100vh;
-  background-image: linear-gradient(55deg, var(--color02), gray);
+  background-image: url(images/red-background2.png);
   background-size: cover;
   background-position: center;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#formulario {
+  display: flex;
+  background-color: var(--color07);
+  border: 1px solid var(--color06);
+  width: 80%;
+}
+
+#form-text {
+  color: var(--color05);
+  flex-grow: 2;
+  width: 30%;
+  padding: 10px;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#form-text h1 {
+  font-family: "cyberpunk font";
+  color: var(--color01);
+}
+
+#join-form {
+  background-color: var(--color07);
+  border-right: 1px solid var(--color06);
+  padding: 15px;
+  color: var(--color03);
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  min-width: 200px;
+  flex-grow: 3;
+}
+
+#form-design {
+  flex-grow: 1;
+  display: flex;
+  width: 20%;
+  min-width: 200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.square-infos {
+  font-size: 2em;
+  border-top: 1px solid var(--color06);
+  color: var(--color03);
+  text-transform: uppercase;
+  font-family: "cyberpunk font";
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#join-form h1 {
+  text-transform: uppercase;
+  font-family: "cyberpunk font";
+  color: var(--color06);
+}
+
+#join-form input {
+  background-color: var(--color07);
+  border: none;
+  border-bottom: 1px solid var(--color06);
+  color: var(--color03);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+#genders {
+  display: flex;
+  justify-content: space-around;
+  color: gray;
+}
+
+#genders label {
+  transition: 0.5s ease-in-out all;
+  border-bottom: 2px solid transparent;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+}
+
+select {
+  background-color: var(--color07);
+  border: 1px solid var(--color06);
+  border-radius: 5px;
+  padding: 5px;
+  color: var(--color03);
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+select:enabled{
+box-shadow: 5px 5px 10px #fc464675;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 5px 5px 10px #fc464675;
+}
+
+#imale:checked ~ #male {
+  color: var(--color03);
+  border-bottom: 2px solid var(--color06);
+}
+#ifemale:checked ~ #female {
+  color: var(--color03);
+  border-bottom: 2px solid var(--color06);
+}
+#inonbinary:checked ~ #nonbinary {
+  color: var(--color03);
+  border-bottom: 2px solid var(--color06);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#join-form input[type="submit"] {
+  border: 1px solid var(--color06);
+  padding: 10px;
+  color: var(--color06);
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  letter-spacing: 10px;
+}
+
+#join-form input[type="submit"]:hover {
+  background-color: var(--color06);
+  color: var(--color07);
+}
+
+#join-form input::placeholder {
+  color: var(--color03);
+}
+
+#join-form input:focus {
+  outline: none;
 }
 
 @media screen and (min-width: 560px) {
